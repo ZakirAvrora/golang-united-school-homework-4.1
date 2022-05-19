@@ -9,9 +9,11 @@ func ReverseString(input string) (output string) {
 	}
 	i, j := 0, len(runes)-1
 
-	for i !=j {
+	for i >= j {
 		runes[i], runes[j] = runes[j], runes[i]
+		i++
+		j--
 	}
-
-	return string(runes) 
+	output = string(runes)
+	return
 }
